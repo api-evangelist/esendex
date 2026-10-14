@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/esendex/main/json-schema/esendex-api-response-of-get-sessions-response-schema.json",
+  "title": "ApiResponseOfGetSessionsResponse",
+  "x-generated": "2026-10-14",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/esendex-openapi.json#/components/schemas/ApiResponseOfGetSessionsResponse",
+  "allOf": [
+    {
+      "$ref": "#/$defs/ApiResponse"
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "nullable": true,
+          "oneOf": [
+            {
+              "$ref": "#/$defs/GetSessionsResponse"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "ApiResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "errors": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/ErrorDto"
+          }
+        }
+      }
+    },
+    "ErrorDto": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "errorCode": {
+          "type": "string"
+        },
+        "errorMessage": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {}
+        }
+      }
+    },
+    "GetSessionsResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sessionIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "guid"
+          }
+        }
+      }
+    }
+  }
+}

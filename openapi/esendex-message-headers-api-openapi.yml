@@ -1,0 +1,90 @@
+openapi: 3.2.0
+info:
+  title: Esendex Emulation API - PrdUK Message Headers API
+  version: 1.0.0
+servers:
+- url: https://api.esendex.com
+tags:
+- name: Message Headers
+paths:
+  /v1.0/messageheaders/{messageId}/body:
+    get:
+      tags:
+      - Message Headers
+      operationId: TitanCustomerUpgradesEmulationEsendexUseCasesGetMessageBodyApiEsendexGetMessageBodyEndpoint
+      parameters:
+      - name: messageId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: guid
+      responses:
+        '204':
+          description: No Content
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+      summary: Titan customer upgrades emulation esendex use cases get message body api…
+      x-summary-source: derived
+  /v1.0/messageheaders/{messageId}:
+    get:
+      tags:
+      - Message Headers
+      operationId: TitanCustomerUpgradesEmulationEsendexUseCasesGetMessageApiEsendexGetMessageEndpoint
+      parameters:
+      - name: messageId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: guid
+      responses:
+        '200':
+          description: OK.
+        '400':
+          description: The specified ID is not a valid GUID.
+        '401':
+          description: No authentication header provided.
+        '403':
+          description: Failed authentication or not authorised to access feature.
+        '404':
+          description: The specified message header doesn't exist.
+      summary: Titan customer upgrades emulation esendex use cases get message api esendex get…
+      x-summary-source: derived
+  /v1.0/messageheaders:
+    get:
+      tags:
+      - Message Headers
+      operationId: TitanCustomerUpgradesEmulationEsendexUseCasesGetAllMessagesApiEsendexGetAllMessagesEndpoint
+      parameters:
+      - name: count
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: startIndex
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '204':
+          description: No Content
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+      summary: Titan customer upgrades emulation esendex use cases get all messages api…
+      x-summary-source: derived
+components:
+  securitySchemes:
+    JWTBearerAuth:
+      type: http
+      description: Enter a JWT token to authorize the requests...
+      scheme: Bearer
+      bearerFormat: JWT
+x-generator: NSwag v14.6.3.0 (NJsonSchema v11.5.2.0 (Newtonsoft.Json v13.0.0.0))

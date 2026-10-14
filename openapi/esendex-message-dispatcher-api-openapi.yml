@@ -1,0 +1,166 @@
+openapi: 3.2.0
+info:
+  title: Esendex Emulation API - PrdUK Message Dispatcher API
+  version: 1.0.0
+servers:
+- url: https://api.esendex.com
+tags:
+- name: Message Dispatcher
+paths:
+  /v1.0/messagedispatcher:
+    post:
+      tags:
+      - Message Dispatcher
+      operationId: TitanCustomerUpgradesEmulationEsendexUseCasesSendMessageApiEsendexSendMessageV10Endpoint
+      requestBody:
+        x-name: ApiEsendexSendMessageRequestBody
+        description: ''
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/messages'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/messages'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/messages'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/messages'
+        required: true
+        x-position: 1
+      responses:
+        '200':
+          description: OK.
+        '400':
+          description: Invalid/Malformed request body or more than 50,000 messages in request.
+        '401':
+          description: No authentication header provided.
+        '403':
+          description: Failed authentication or not authorised to access feature.
+        '404':
+          description: The specified contact or contact group doesn't exist.
+        '415':
+          description: Content type is not supported or unspecified.
+      summary: Titan customer upgrades emulation esendex use cases send message api esendex…
+      x-summary-source: derived
+  /v1.1/messagedispatcher:
+    post:
+      tags:
+      - Message Dispatcher
+      operationId: TitanCustomerUpgradesEmulationEsendexUseCasesSendMessageApiEsendexSendMessageV11Endpoint
+      requestBody:
+        x-name: ApiEsendexSendMessageRequestBody
+        description: ''
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/messages'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/messages'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/messages'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/messages'
+        required: true
+        x-position: 1
+      responses:
+        '200':
+          description: OK.
+        '400':
+          description: Invalid/Malformed request body or more than 50,000 messages in request.
+        '401':
+          description: No authentication header provided.
+        '403':
+          description: Failed authentication or not authorised to access feature.
+        '404':
+          description: The specified contact or contact group doesn't exist.
+        '415':
+          description: Content type is not supported or unspecified.
+      summary: Titan customer upgrades emulation esendex use cases send message api esendex…
+      x-summary-source: derived
+components:
+  schemas:
+    messages:
+      type: object
+      additionalProperties: false
+      properties:
+        accountreference:
+          type: string
+        from:
+          type:
+          - string
+          - 'null'
+        type:
+          type: string
+        lang:
+          type:
+          - string
+          - 'null'
+        retries:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        validity:
+          type: integer
+          format: int32
+        sendat:
+          type:
+          - string
+          - 'null'
+        characterset:
+          type:
+          - string
+          - 'null'
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/ApiEsendexSendMessageRequestMessage'
+    ApiEsendexSendMessageRequestMessage:
+      type: object
+      additionalProperties: false
+      properties:
+        from:
+          type:
+          - string
+          - 'null'
+        to:
+          type: string
+        type:
+          type:
+          - string
+          - 'null'
+        body:
+          type: string
+        lang:
+          type:
+          - string
+          - 'null'
+        retries:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        validity:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        characterset:
+          type:
+          - string
+          - 'null'
+  securitySchemes:
+    JWTBearerAuth:
+      type: http
+      description: Enter a JWT token to authorize the requests...
+      scheme: Bearer
+      bearerFormat: JWT
+x-generator: NSwag v14.6.3.0 (NJsonSchema v11.5.2.0 (Newtonsoft.Json v13.0.0.0))

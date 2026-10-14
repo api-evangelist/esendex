@@ -1,0 +1,11 @@
+generated: '2026-10-14'
+method: generated
+generator: extract-docs-artifacts.py skills (local)
+source: openapi/esendex-openapi.json
+skills:
+- file: skills/esendex-send-message.md
+  name: esendex-send-message
+  api: openapi/esendex-openapi.json
+  operations:
+  - TitanCustomerUpgradesEmulationEsendexUseCasesSendMessageApiEsendexSendMessageV10Endpoint
+  - TitanCustomerUpgradesEmulationEsendexUseCasesSendMessageApiEsendexSendMessageV11Endpoint

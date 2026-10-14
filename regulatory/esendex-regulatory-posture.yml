@@ -1,0 +1,25 @@
+generated: '2026-10-14'
+method: probed
+source: https://enhancedsupport.esendex.co.uk/privacy-policy/
+signals:
+  data_retention:
+    evidence:
+      - source: https://enhancedsupport.esendex.co.uk/privacy-policy/
+        http_status: 200
+        fetched: /tmp/esendex_privacy_policy.html
+        quote: "Because we provide an ongoing contract and service to you, it is not possible for us to specify in advance how long we will retain your personal data."
+    note: Retention period is unspecified, indicating indefinite or case-by-case retention.
+  subprocessors:
+    evidence:
+      - source: https://enhancedsupport.esendex.co.uk/privacy-policy/
+        http_status: 200
+        fetched: /tmp/esendex_privacy_policy.html
+        quote: "Commify does not control our business partners’ use of the information we collect, and their use of the information will be in accordance with their own privacy policies."
+    note: Acknowledges use of subprocessors with their own policies.
+  ai_transparency:
+    evidence:
+      - source: https://enhancedsupport.esendex.co.uk/privacy-policy/
+        http_status: 200
+        fetched: /tmp/esendex_privacy_policy.html
+        quote: "Strict Prohibition of Core Model Training: Your private communications, interaction history, and contact metadata are processed strictly to handle your live dialogue session. We contractually prohibit our AI providers and their sub‑processors from retaining, using, or ingesting your personal data to train or improve their global public models."
+    note: Explicitly prohibits AI model training on personal data.

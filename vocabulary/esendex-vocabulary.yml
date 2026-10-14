@@ -1,0 +1,81 @@
+generated: '2026-10-14'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/esendex-openapi.json
+vocabulary:
+  name: Esendex Domain Vocabulary
+  description: 'Terms declared by Esendex''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-14'
+  terms:
+  - term: ApiResponse
+    definition: 'Object declared by the contract with fields: errors.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/ApiResponse
+  - term: ErrorDto
+    definition: 'Object declared by the contract with fields: errorCode, errorMessage, metadata.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/ErrorDto
+  - term: UpdateCredentialRequest
+    definition: 'Object declared by the contract with fields: upgradeDate, upgradeEnabled.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/UpdateCredentialRequest
+  - term: GetSessionsResponse
+    definition: 'Object declared by the contract with fields: sessionIds.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/GetSessionsResponse
+  - term: UserCredential
+    definition: 'Object declared by the contract with fields: credentialId, userName, platform, accounts, tenantCode, userId, upgradeDate, upgradeEnabled.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/UserCredential
+  - term: CredentialAccount
+    definition: 'Object declared by the contract with fields: accountReference, legacyAccountReference.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/CredentialAccount
+  - term: GetCredentialsResponse
+    definition: 'Object declared by the contract with fields: credentials.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/GetCredentialsResponse
+  - term: CreateSessionsRequest
+    definition: 'Object declared by the contract with fields: sessionIds.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/CreateSessionsRequest
+  - term: CreateCredentialResponse
+    definition: 'Object declared by the contract with fields: credentialId, userName, platform, accounts, tenantCode, userId, upgradeDate, upgradeEnabled.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/CreateCredentialResponse
+  - term: CreateCredentialAccount
+    definition: 'Object declared by the contract with fields: accountReference, legacyAccountReference.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/CreateCredentialAccount
+  - term: CreateCredentialRequest
+    definition: 'Object declared by the contract with fields: platform, userName, passwordHash, accounts, tenantCode, userId, upgradeEnabled,
+      upgradeDate.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/CreateCredentialRequest
+  - term: CreateCredentialAccountRequest
+    definition: 'Object declared by the contract with fields: accountReference, legacyAccountReference.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/CreateCredentialAccountRequest
+  - term: messages
+    definition: 'Object declared by the contract with fields: accountreference, from, type, lang, retries, validity, sendat, characterset, messages.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/messages
+  - term: ApiEsendexSendMessageRequestMessage
+    definition: 'Object declared by the contract with fields: from, to, type, body, lang, retries, validity, characterset.'
+    tags:
+    - Object
+    source: openapi/esendex-openapi.json#/components/schemas/ApiEsendexSendMessageRequestMessage

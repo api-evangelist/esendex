@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/esendex/main/json-schema/esendex-messages-schema.json",
+  "title": "messages",
+  "x-generated": "2026-10-14",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/esendex-openapi.json#/components/schemas/messages",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "accountreference": {
+      "type": "string"
+    },
+    "from": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "type": "string"
+    },
+    "lang": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retries": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "int32"
+    },
+    "validity": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "sendat": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "characterset": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "messages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/$defs/ApiEsendexSendMessageRequestMessage"
+      }
+    }
+  },
+  "$defs": {
+    "ApiEsendexSendMessageRequestMessage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "from": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "to": {
+          "type": "string"
+        },
+        "type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "body": {
+          "type": "string"
+        },
+        "lang": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "retries": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "int32"
+        },
+        "validity": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "int32"
+        },
+        "characterset": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "@context": {
+    "@vocab": "https://esendex.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "esendex": "https://esendex.com/schema#",
+    "ApiResponse": "esendex:ApiResponse",
+    "errors": {
+      "@id": "esendex:errors",
+      "@container": "@list"
+    },
+    "ErrorDto": "esendex:ErrorDto",
+    "errorCode": {
+      "@id": "esendex:errorCode",
+      "@type": "xsd:string"
+    },
+    "errorMessage": {
+      "@id": "esendex:errorMessage",
+      "@type": "xsd:string"
+    },
+    "metadata": {
+      "@id": "esendex:metadata"
+    },
+    "UpdateCredentialRequest": "esendex:UpdateCredentialRequest",
+    "upgradeDate": {
+      "@id": "esendex:upgradeDate",
+      "@type": "xsd:dateTime"
+    },
+    "upgradeEnabled": {
+      "@id": "esendex:upgradeEnabled",
+      "@type": "xsd:boolean"
+    },
+    "GetSessionsResponse": "esendex:GetSessionsResponse",
+    "sessionIds": {
+      "@id": "esendex:sessionIds",
+      "@container": "@list"
+    },
+    "UserCredential": "esendex:UserCredential",
+    "credentialId": {
+      "@id": "esendex:credentialId",
+      "@type": "xsd:string"
+    },
+    "userName": {
+      "@id": "esendex:userName",
+      "@type": "xsd:string"
+    },
+    "platform": {
+      "@id": "esendex:platform",
+      "@type": "xsd:string"
+    },
+    "accounts": {
+      "@id": "esendex:accounts",
+      "@container": "@list"
+    },
+    "tenantCode": {
+      "@id": "esendex:tenantCode",
+      "@type": "xsd:string"
+    },
+    "userId": {
+      "@id": "esendex:userId",
+      "@type": "xsd:string"
+    },
+    "CredentialAccount": "esendex:CredentialAccount",
+    "accountReference": {
+      "@id": "esendex:accountReference",
+      "@type": "xsd:string"
+    },
+    "legacyAccountReference": {
+      "@id": "esendex:legacyAccountReference",
+      "@type": "xsd:string"
+    },
+    "GetCredentialsResponse": "esendex:GetCredentialsResponse",
+    "credentials": {
+      "@id": "esendex:credentials",
+      "@container": "@list"
+    },
+    "CreateSessionsRequest": "esendex:CreateSessionsRequest",
+    "CreateCredentialResponse": "esendex:CreateCredentialResponse",
+    "CreateCredentialAccount": "esendex:CreateCredentialAccount",
+    "CreateCredentialRequest": "esendex:CreateCredentialRequest",
+    "passwordHash": {
+      "@id": "esendex:passwordHash",
+      "@type": "xsd:string"
+    },
+    "CreateCredentialAccountRequest": "esendex:CreateCredentialAccountRequest",
+    "messages": "esendex:messages",
+    "accountreference": {
+      "@id": "esendex:accountreference",
+      "@type": "xsd:string"
+    },
+    "from": {
+      "@id": "esendex:from",
+      "@type": "xsd:string"
+    },
+    "type": {
+      "@id": "esendex:type",
+      "@type": "xsd:string"
+    },
+    "lang": {
+      "@id": "esendex:lang",
+      "@type": "xsd:string"
+    },
+    "retries": {
+      "@id": "esendex:retries",
+      "@type": "xsd:integer"
+    },
+    "validity": {
+      "@id": "esendex:validity",
+      "@type": "xsd:integer"
+    },
+    "sendat": {
+      "@id": "esendex:sendat",
+      "@type": "xsd:string"
+    },
+    "characterset": {
+      "@id": "esendex:characterset",
+      "@type": "xsd:string"
+    },
+    "ApiEsendexSendMessageRequestMessage": "esendex:ApiEsendexSendMessageRequestMessage",
+    "to": {
+      "@id": "esendex:to",
+      "@type": "xsd:string"
+    },
+    "body": {
+      "@id": "esendex:body",
+      "@type": "xsd:string"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Esendex API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Esendex's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-14) from openapi/esendex-openapi.json.",
+  "dcterms:created": "2026-10-14",
+  "dcterms:source": [
+    "openapi/esendex-openapi.json"
+  ]
+}

@@ -1,0 +1,14 @@
+generated: '2026-10-14'
+method: derived
+source: openapi/esendex-openapi.json
+summary:
+  types:
+  - http
+schemes:
+- name: JWTBearerAuth
+  type: http
+  scheme: Bearer
+  bearerFormat: JWT
+  description: Enter a JWT token to authorize the requests...
+  sources:
+  - openapi/esendex-openapi.json

@@ -1,0 +1,1140 @@
+{
+  "x-generator": "NSwag v14.6.3.0 (NJsonSchema v11.5.2.0 (Newtonsoft.Json v13.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Esendex Emulation API - PrdUK",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.esendex.com"
+    }
+  ],
+  "paths": {
+    "/v1/credentials/{credentialId}": {
+      "patch": {
+        "tags": [
+          "Credential Management"
+        ],
+        "operationId": "TitanAPIAuthServiceEmulationFrameworkCredentialManagementUseCasesUpdateCredentialUpdateCredentialEndpoint",
+        "parameters": [
+          {
+            "name": "credentialId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        ],
+        "requestBody": {
+          "x-name": "UpdateCredentialRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCredentialRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Credential Management"
+        ],
+        "operationId": "TitanAPIAuthServiceEmulationFrameworkCredentialManagementUseCasesGetCredentialsSingleGetCredentialEndpoint",
+        "parameters": [
+          {
+            "name": "credentialId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseOfUserCredential"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Credential Management"
+        ],
+        "operationId": "TitanAPIAuthServiceEmulationFrameworkCredentialManagementUseCasesDeleteCredentialDeleteCredentialEndpoint",
+        "parameters": [
+          {
+            "name": "credentialId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/v1/credentials/{credentialId}/sessions": {
+      "get": {
+        "tags": [
+          "Credential Management"
+        ],
+        "operationId": "TitanAPIAuthServiceEmulationFrameworkCredentialManagementUseCasesGetSessionsGetSessionsEndpoint",
+        "parameters": [
+          {
+            "name": "credentialId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseOfGetSessionsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Credential Management"
+        ],
+        "operationId": "TitanAPIAuthServiceEmulationFrameworkCredentialManagementUseCasesDeleteSessionsDeleteSessionsEndpoint",
+        "parameters": [
+          {
+            "name": "credentialId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Credential Management"
+        ],
+        "operationId": "TitanAPIAuthServiceEmulationFrameworkCredentialManagementUseCasesCreateSessionsCreateSessionsEndpoint",
+        "parameters": [
+          {
+            "name": "credentialId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        ],
+        "requestBody": {
+          "x-name": "CreateSessionsRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSessionsRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/v1/credentials": {
+      "get": {
+        "tags": [
+          "Credential Management"
+        ],
+        "operationId": "TitanAPIAuthServiceEmulationFrameworkCredentialManagementUseCasesGetCredentialsManyGetCredentialsEndpoint",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "account",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "userName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseOfGetCredentialsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Credential Management"
+        ],
+        "operationId": "TitanAPIAuthServiceEmulationFrameworkCredentialManagementUseCasesCreateCredentialCreateCredentialEndpoint",
+        "requestBody": {
+          "x-name": "CreateCredentialRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCredentialRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseOfCreateCredentialResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/v1/credentials/{credentialId}/sessions/{sessionId}": {
+      "delete": {
+        "tags": [
+          "Credential Management"
+        ],
+        "operationId": "TitanAPIAuthServiceEmulationFrameworkCredentialManagementUseCasesDeleteSessionByIdDeleteSessionByIdEndpoint",
+        "parameters": [
+          {
+            "name": "credentialId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          },
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/v1/credentials/account/{accountReference}/sessions": {
+      "delete": {
+        "tags": [
+          "Credential Management"
+        ],
+        "operationId": "TitanAPIAuthServiceEmulationFrameworkCredentialManagementUseCasesDeleteSessionByAccountIdDeleteSessionsByAccountIdEndpoint",
+        "parameters": [
+          {
+            "name": "accountReference",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/v1/credentials/account/{accountReference}": {
+      "delete": {
+        "tags": [
+          "Credential Management"
+        ],
+        "operationId": "TitanAPIAuthServiceEmulationFrameworkCredentialManagementUseCasesDeleteAllCredentialsDeleteAllCredentialsEndpoint",
+        "parameters": [
+          {
+            "name": "accountReference",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/v1.0/messagedispatcher": {
+      "post": {
+        "tags": [
+          "Message Dispatcher"
+        ],
+        "operationId": "TitanCustomerUpgradesEmulationEsendexUseCasesSendMessageApiEsendexSendMessageV10Endpoint",
+        "requestBody": {
+          "x-name": "ApiEsendexSendMessageRequestBody",
+          "description": "",
+          "content": {
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/messages"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/messages"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/messages"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/messages"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "OK."
+          },
+          "400": {
+            "description": "Invalid/Malformed request body or more than 50,000 messages in request."
+          },
+          "401": {
+            "description": "No authentication header provided."
+          },
+          "403": {
+            "description": "Failed authentication or not authorised to access feature."
+          },
+          "404": {
+            "description": "The specified contact or contact group doesn't exist."
+          },
+          "415": {
+            "description": "Content type is not supported or unspecified."
+          }
+        }
+      }
+    },
+    "/v1.1/messagedispatcher": {
+      "post": {
+        "tags": [
+          "Message Dispatcher"
+        ],
+        "operationId": "TitanCustomerUpgradesEmulationEsendexUseCasesSendMessageApiEsendexSendMessageV11Endpoint",
+        "requestBody": {
+          "x-name": "ApiEsendexSendMessageRequestBody",
+          "description": "",
+          "content": {
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/messages"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/messages"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/messages"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/messages"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "OK."
+          },
+          "400": {
+            "description": "Invalid/Malformed request body or more than 50,000 messages in request."
+          },
+          "401": {
+            "description": "No authentication header provided."
+          },
+          "403": {
+            "description": "Failed authentication or not authorised to access feature."
+          },
+          "404": {
+            "description": "The specified contact or contact group doesn't exist."
+          },
+          "415": {
+            "description": "Content type is not supported or unspecified."
+          }
+        }
+      }
+    },
+    "/v1.0/messageheaders/{messageId}/body": {
+      "get": {
+        "tags": [
+          "Message Headers"
+        ],
+        "operationId": "TitanCustomerUpgradesEmulationEsendexUseCasesGetMessageBodyApiEsendexGetMessageBodyEndpoint",
+        "parameters": [
+          {
+            "name": "messageId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/v1.0/messageheaders/{messageId}": {
+      "get": {
+        "tags": [
+          "Message Headers"
+        ],
+        "operationId": "TitanCustomerUpgradesEmulationEsendexUseCasesGetMessageApiEsendexGetMessageEndpoint",
+        "parameters": [
+          {
+            "name": "messageId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK."
+          },
+          "400": {
+            "description": "The specified ID is not a valid GUID."
+          },
+          "401": {
+            "description": "No authentication header provided."
+          },
+          "403": {
+            "description": "Failed authentication or not authorised to access feature."
+          },
+          "404": {
+            "description": "The specified message header doesn't exist."
+          }
+        }
+      }
+    },
+    "/v1.0/messageheaders": {
+      "get": {
+        "tags": [
+          "Message Headers"
+        ],
+        "operationId": "TitanCustomerUpgradesEmulationEsendexUseCasesGetAllMessagesApiEsendexGetAllMessagesEndpoint",
+        "parameters": [
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ErrorDto"
+            }
+          }
+        }
+      },
+      "ErrorDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "errorCode": {
+            "type": "string"
+          },
+          "errorMessage": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "object",
+            "nullable": true,
+            "additionalProperties": {}
+          }
+        }
+      },
+      "UpdateCredentialRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "upgradeDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "upgradeEnabled": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ApiResponseOfGetSessionsResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ApiResponse"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/GetSessionsResponse"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "GetSessionsResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "sessionIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        }
+      },
+      "GetSessionsRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "ApiResponseOfUserCredential": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ApiResponse"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/UserCredential"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "UserCredential": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "credentialId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "platform": {
+            "type": "string"
+          },
+          "accounts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CredentialAccount"
+            }
+          },
+          "tenantCode": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "upgradeDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "upgradeEnabled": {
+            "type": "boolean"
+          }
+        }
+      },
+      "CredentialAccount": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "accountReference": {
+            "type": "string"
+          },
+          "legacyAccountReference": {
+            "type": "string"
+          }
+        }
+      },
+      "GetCredentialRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "ApiResponseOfGetCredentialsResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ApiResponse"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/GetCredentialsResponse"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "GetCredentialsResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "credentials": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserCredential"
+            }
+          }
+        }
+      },
+      "GetCredentialsRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "DeleteSessionsRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "DeleteSessionByIdRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "DeleteSessionsByAccountIdRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "DeleteCredentialRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "DeleteAllCredentialsRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "CreateSessionsRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "sessionIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        }
+      },
+      "ApiResponseOfCreateCredentialResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ApiResponse"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateCredentialResponse"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "CreateCredentialResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "credentialId": {
+            "type": "string",
+            "format": "guid"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "platform": {
+            "type": "string"
+          },
+          "accounts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateCredentialAccount"
+            }
+          },
+          "tenantCode": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "upgradeDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "upgradeEnabled": {
+            "type": "boolean"
+          }
+        }
+      },
+      "CreateCredentialAccount": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "accountReference": {
+            "type": "string"
+          },
+          "legacyAccountReference": {
+            "type": "string"
+          }
+        }
+      },
+      "CreateCredentialRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "platform": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "passwordHash": {
+            "type": "string",
+            "nullable": true
+          },
+          "accounts": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CreateCredentialAccountRequest"
+            }
+          },
+          "tenantCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "upgradeEnabled": {
+            "type": "boolean"
+          },
+          "upgradeDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "CreateCredentialAccountRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "accountReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "legacyAccountReference": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "messages": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "accountreference": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string"
+          },
+          "lang": {
+            "type": "string",
+            "nullable": true
+          },
+          "retries": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "validity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sendat": {
+            "type": "string",
+            "nullable": true
+          },
+          "characterset": {
+            "type": "string",
+            "nullable": true
+          },
+          "messages": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ApiEsendexSendMessageRequestMessage"
+            }
+          }
+        }
+      },
+      "ApiEsendexSendMessageRequestMessage": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "to": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "body": {
+            "type": "string"
+          },
+          "lang": {
+            "type": "string",
+            "nullable": true
+          },
+          "retries": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "validity": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "characterset": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "ApiEsendexGetMessageBodyRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "ApiEsendexGetMessageRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "ApiEsendexGetAllMessagesRequest": {
+        "type": "object",
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "JWTBearerAuth": {
+        "type": "http",
+        "description": "Enter a JWT token to authorize the requests...",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

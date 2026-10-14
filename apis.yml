@@ -1,23 +1,144 @@
 aid: esendex
 name: Esendex
-description: 'Esendex is a company surfaced via the API Evangelist harvest backlog (source: tag-qc) and
-  added to the network as a stub for full-pipeline profiling.'
+description: Esendex provides global business SMS and multichannel messaging services, offering APIs for SMS, WhatsApp, RCS, Email, Voice and
+  more. It serves enterprises across multiple countries, enabling messaging, notifications, two‑factor authentication, digital letters and chatbot
+  integration through a unified platform.
 url: https://raw.githubusercontent.com/api-evangelist/esendex/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:tag-qc
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-14 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-13'
 modified: '2026-10-13'
 tags:
-- Company
-apis: []
+- SMS
+- Messaging
+- Communications
+- API
+- Business
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: AgenticAccess
+  url: agentic-access/esendex-agentic-access.yml
+- type: Spectral
+  url: rules/esendex-rules.yml
+- type: JSONLD
+  url: json-ld/esendex-context.jsonld
+- type: Vocabulary
+  url: vocabulary/esendex-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DataModel
+  url: data-model/esendex-data-model.yml
+- type: ErrorCatalog
+  url: errors/esendex-problem-types.yml
+- type: Conformance
+  url: conformance/esendex-conformance.yml
+- type: Hosts
+  url: hosts/esendex-hosts.yml
+- type: Vendors
+  url: vendors/esendex-vendors.yml
+- type: SDKs
+  url: packages/esendex-packages.yml
+- type: Packages
+  url: packages/esendex-packages.yml
+- type: StatusPage
+  url: https://status.esendex.com/
+- type: Authentication
+  url: authentication/esendex-authentication.yml
+- type: DomainSecurity
+  url: security/esendex-domain-security.yml
 - type: Website
   url: https://www.esendex.com
+- type: Documentation
+  url: https://www.esendex.co.uk/developers/
+- type: DeveloperPortal
+  url: https://www.esendex.co.uk/developers/
+- type: APIReference
+  url: https://www.esendex.co.uk/developers/
+- type: GettingStarted
+  url: https://www.esendex.co.uk/developers/
+- type: Pricing
+  url: https://www.esendex.co.uk/pricing/
+- type: Support
+  url: https://www.esendex.co.uk/contact/
+- type: Blog
+  url: https://www.esendex.co.uk/blog/
+apis:
+- aid: esendex:esendex-credential-management-api
+  name: Esendex Credential Management API
+  description: The Credential Management API from Esendex — 6 operation(s) for credential management.
+  humanURL: https://developers.esendex.com/api-reference/
+  baseURL: https://api.esendex.com
+  tags:
+  - Credential Management
+  properties:
+  - type: OpenAPI
+    url: openapi/esendex-credential-management-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/esendex-messages-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-create-credential-request-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-api-response-of-create-credential-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-api-response-of-get-credentials-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-api-response-of-get-sessions-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-api-response-of-user-credential-schema.json
+- aid: esendex:esendex-message-dispatcher-api
+  name: Esendex Message Dispatcher API
+  description: The Message Dispatcher API from Esendex — 2 operation(s) for message dispatcher.
+  humanURL: https://developers.esendex.com/api-reference/
+  baseURL: https://api.esendex.com
+  tags:
+  - Message Dispatcher
+  properties:
+  - type: OpenAPI
+    url: openapi/esendex-message-dispatcher-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/esendex-messages-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-create-credential-request-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-api-response-of-create-credential-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-api-response-of-get-credentials-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-api-response-of-get-sessions-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-api-response-of-user-credential-schema.json
+- aid: esendex:esendex-message-headers-api
+  name: Esendex Message Headers API
+  description: The Message Headers API from Esendex — 3 operation(s) for message headers.
+  humanURL: https://developers.esendex.com/api-reference/
+  baseURL: https://api.esendex.com
+  tags:
+  - Message Headers
+  properties:
+  - type: OpenAPI
+    url: openapi/esendex-message-headers-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/esendex-messages-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-create-credential-request-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-api-response-of-create-credential-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-api-response-of-get-credentials-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-api-response-of-get-sessions-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esendex-api-response-of-user-credential-schema.json
+x-enrichment:
+  date: '2026-10-14'
+  status: enriched
+  artifacts_added: 18
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

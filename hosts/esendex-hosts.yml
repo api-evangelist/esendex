@@ -1,0 +1,154 @@
+generated: '2026-10-14'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 11
+  own: 8
+  other_domain: 3
+  platform: 0
+  roles:
+  - api
+  - identity
+  - other
+  - portal
+  - status
+  - support
+  - website
+hosts:
+- host: api.co.uk
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: api.co.uk
+  role: api
+  relation: other-domain
+- host: api.esendex.com
+  found_by:
+  - apis[]
+  - contract-discovery
+  types: []
+  serves:
+  - api
+  registrable_domain: esendex.com
+  role: api
+  relation: own
+- host: dev.esendex.com
+  found_by:
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - docs
+  registrable_domain: esendex.com
+  role: other
+  relation: own
+- host: developer.esendex.co.uk
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: esendex.co.uk
+  role: portal
+  relation: other-domain
+- host: developers.esendex.com
+  found_by:
+  - apis[]
+  - probed
+  - site-links
+  - namespace-probe
+  - docs-index
+  - well-known
+  types: []
+  serves:
+  - docs
+  title: Esendex Developers | Easy SMS / Text Messaging APIs
+  status: 200
+  registrable_domain: esendex.com
+  role: portal
+  relation: own
+- host: login.esendex.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: esendex.com
+  role: identity
+  relation: own
+- host: portal.esendex.com
+  found_by:
+  - probed
+  - site-links
+  - docs-index
+  - well-known
+  types: []
+  serves:
+  - docs
+  registrable_domain: esendex.com
+  role: other
+  relation: own
+- host: status.esendex.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: esendex.com
+  role: status
+  relation: own
+- host: support.esendex.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: esendex.com
+  role: support
+  relation: own
+- host: www.esendex.co.uk
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Documentation
+  - DeveloperPortal
+  - APIReference
+  - GettingStarted
+  - Pricing
+  - Support
+  - Blog
+  serves:
+  - docs
+  - cdn
+  - hosting
+  vendor: cloudflare
+  registrable_domain: esendex.co.uk
+  role: portal
+  relation: other-domain
+- host: www.esendex.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  serves: []
+  registrable_domain: esendex.com
+  role: website
+  relation: own

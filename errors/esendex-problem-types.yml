@@ -1,0 +1,43 @@
+generated: '2026-10-14'
+method: derived
+generator: derive-problem-types.py
+source:
+- openapi/esendex-openapi.json
+format: custom
+envelope:
+  media_type: null
+  schema: null
+coverage:
+  operations: 16
+  statuses_declared: 5
+problems:
+- status: 400
+  title: Bad Request
+  description: Invalid/Malformed request body or more than 50,000 messages in request.
+  operations: 3
+  media_types: []
+  schema: null
+- status: 401
+  title: Unauthorized
+  description: Unauthorized
+  operations: 16
+  media_types: []
+  schema: null
+- status: 403
+  title: Forbidden
+  description: Forbidden
+  operations: 16
+  media_types: []
+  schema: null
+- status: 404
+  title: Not Found
+  description: The specified contact or contact group doesn't exist.
+  operations: 3
+  media_types: []
+  schema: null
+- status: 415
+  title: Unsupported Media Type
+  description: Content type is not supported or unspecified.
+  operations: 2
+  media_types: []
+  schema: null
