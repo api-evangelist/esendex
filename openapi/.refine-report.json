@@ -1,24 +1,27 @@
 {
   "provider": "esendex",
   "sources": [
-    "esendex-openapi.json"
+    "_original/esendex-openapi.json"
   ],
   "outputs": [
     "esendex-credential-management-api-openapi.yml",
     "esendex-message-dispatcher-api-openapi.yml",
     "esendex-message-headers-api-openapi.yml"
   ],
-  "archived": [
-    "archived openapi/esendex-openapi.json"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "esendex-openapi.json: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
     "esendex-openapi.json: declared missing tag: Credential Management",
     "esendex-openapi.json: declared missing tag: Message Dispatcher",
     "esendex-openapi.json: declared missing tag: Message Headers",
-    "apis.yml register: written (+3 apis, 3 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "esendex-credential-management-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "esendex-message-dispatcher-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "esendex-message-headers-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
