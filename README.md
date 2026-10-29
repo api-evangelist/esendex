@@ -64,5 +64,124 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Esendex is a company surfaced via the API Evangelist harvest backlog (source: tag-qc) and added to the network as a stub for full-pipeline profiling.
-- https://www.esendex.com
+Esendex provides global business SMS and multichannel messaging services, offering APIs for SMS, WhatsApp, RCS, Email, Voice and more. It serves enterprises across multiple countries, enabling messaging, notifications, two‑factor authentication, digital letters and chatbot integration through a unified platform.
+
+**Areas:** SMS · Messaging · Communications · Business
+
+## Esendex on APIs.io
+
+Everything profiled for Esendex is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/esendex/](https://apis.io/providers/esendex/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [Esendex Credential Management API](https://apis.io/apis/esendex/esendex-credential-management-api/) — The Credential Management API from Esendex — 6 operation(s) for credential management.
+- [Esendex Message Dispatcher API](https://apis.io/apis/esendex/esendex-message-dispatcher-api/) — The Message Dispatcher API from Esendex — 2 operation(s) for message dispatcher.
+- [Esendex Message Headers API](https://apis.io/apis/esendex/esendex-message-headers-api/) — The Message Headers API from Esendex — 3 operation(s) for message headers.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Esendex Agentic Access](https://apis.io/agentic-access/esendex/esendex-agentic-access/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [ApiResponseOfCreateCredentialResponse](https://apis.io/schemas/esendex/esendex-api-response-of-create-credential-response/)
+- [ApiResponseOfGetCredentialsResponse](https://apis.io/schemas/esendex/esendex-api-response-of-get-credentials-response/)
+- [ApiResponseOfGetSessionsResponse](https://apis.io/schemas/esendex/esendex-api-response-of-get-sessions-response/)
+- [ApiResponseOfUserCredential](https://apis.io/schemas/esendex/esendex-api-response-of-user-credential/)
+- [CreateCredentialRequest](https://apis.io/schemas/esendex/esendex-create-credential-request/)
+- [messages](https://apis.io/schemas/esendex/esendex-messages/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Esendex Context](https://apis.io/jsonld/esendex/esendex-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Esendex API Rules](https://apis.io/rules/esendex/esendex-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Esendex Authentication](https://apis.io/security/esendex/esendex-authentication/)
+- [Esendex Domain Security](https://apis.io/security/esendex/esendex-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.esendex.com)
+- [Documentation](https://www.esendex.co.uk/developers/)
+- [Getting started](https://www.esendex.co.uk/developers/)
+- [API reference](https://www.esendex.co.uk/developers/)
+- [Pricing](https://www.esendex.co.uk/pricing/)
+- [Support](https://www.esendex.co.uk/contact/)
+- [Blog](https://www.esendex.co.uk/blog/)
+- [Status](https://status.esendex.com/)
+
+## API Evangelist rating
+
+**Kin Score 38.7** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 53.6 |
+| Contract quality | 59.9 |
+| Contract governance | 22.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 66.1 |
+| Access clarity | 10.5 |
+
+**Agent readiness 18.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | — |
+
+**Regulatory alignment 14.2** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/esendex/](https://apis.io/providers/esendex/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Esendex: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/esendex/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
